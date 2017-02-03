@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1019253663463",
+    "firebase_url": "https://taboochat-8fc33.firebaseio.com",
+    "project_id": "taboochat-8fc33",
+    "storage_bucket": "taboochat-8fc33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019253663463:android:5079ea1aba447271",
+        "android_client_info": {
+          "package_name": "tech.rithm.taboochat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1019253663463-c5ipr7h94mmff918vpv9thsa4ef3d935.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCef4JmR0Vcf90bYZWifC42OroPtgJD1d4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1019253663463-c5ipr7h94mmff918vpv9thsa4ef3d935.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
