@@ -1,5 +1,6 @@
 package tech.rithm.taboochat;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.Preference;
@@ -11,6 +12,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Firebase Variables
     private FirebaseAuth mFirebaseAuth;
+    private FirebaseUser mUser;
 
 
     @Override
@@ -34,8 +39,22 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-        //set default username
-        mUserName = getResources().getString(R.string.anonymous);
+        // set default username
+        mUserName = getString(R.string.anonymous);
+
+        // get Firebase Authenticator instance
+        mFirebaseAuth = FirebaseAuth.getInstance();
+
+        // establish user
+        mUser = mFirebaseAuth.getCurrentUser();
+        if(mUser == null){
+            startActivity(new Intent(this, SignInActivity.class));
+            finish();
+            return;
+        }
+
+
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
