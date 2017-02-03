@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="@string/enter_email"
+        android:layout_width="51dp"
+        android:layout_height="42dp"
+        android:id="@+id/label_enter_email"
+        android:layout_marginTop="64dp"
+        app:layout_constraintTop_toBottomOf="@+id/new_account_header"
+        android:layout_marginStart="56dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="56dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/email_entered"
+        android:selectAllOnFocus="false"
+        android:hint="@string/email_hint"
+        android:layout_marginTop="64dp"
+        app:layout_constraintTop_toBottomOf="@+id/new_account_header"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/label_enter_email"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:text="@string/bttn_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_account_header"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:text="@string/enter_password"
+        android:layout_width="69dp"
+        android:layout_height="42dp"
+        android:id="@+id/label_enter_pwd"
+        android:layout_marginStart="56dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/label_enter_email" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/password_entered"
+        android:hint="@string/password_hint"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/label_enter_pwd"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/email_entered" />
+
+    <Button
+        android:text="@string/bttn_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bttn_create_acct"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/password_entered" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar_create_account"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="104dp"
+        app:layout_constraintTop_toBottomOf="@+id/bttn_create_acct" />
+</android.support.constraint.ConstraintLayout>

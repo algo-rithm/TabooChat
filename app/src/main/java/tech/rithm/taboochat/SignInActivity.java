@@ -69,6 +69,22 @@ public class SignInActivity extends AppCompatActivity implements
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
+    //Create Account Click Listener
+    @OnClick(R.id.bttn_create)
+    public void createAccount(){
+        Intent createAcct = new Intent(this, CreateAccountActivity.class);
+        startActivity(createAcct);
+        finish();
+    }
+
+    //Create Account Click Listener
+    @OnClick(R.id.bttn_login)
+    public void loginWithAccount(){
+        Intent createAcct = new Intent(this, SignInWithAccountActivity.class);
+        startActivity(createAcct);
+        finish();
+    }
+
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
         // An unresolvable error has occurred and Google APIs (including Sign-In) will not
